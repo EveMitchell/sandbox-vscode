@@ -1,0 +1,36 @@
+%%{init: {'theme': 'neutral', 'themeVariables': { 'fontSize': '16px'}}}%%
+flowchart TB
+    subgraph PreSales["Pre-Sales Qualification (Week 1)"]
+        A[Lead Qualification] --> B[Initial Assessment]
+        B --> C[Resource Evaluation]
+        C --> D[Preliminary Scope Creation]
+    end
+
+    subgraph SalesProcess["Sales Process (Weeks 2-3)"]
+        E[Detailed Need Analysis] --> F[Solution Design]
+        F --> G[Pricing Strategy]
+        G --> H[Proposal Development]
+    end
+
+    subgraph PreHandoff["Pre-Handoff Phase (Week 4)"]
+        I[Contract Preparation] --> J[Internal Review]
+        J --> K[Stakeholder Alignment]
+        K --> L[Resource Confirmation]
+    end
+
+    subgraph Handoff["Handoff Process (Week 5)"]
+        M[Joint Sales-Ops Meeting] --> N[Documentation Review]
+        N --> O[Implementation Planning]
+        O --> P[Customer Orientation]
+    end
+
+    subgraph PostHandoff["Post-Handoff Support (Weeks 6-8)"]
+        Q[Initial Implementation] --> R[Progress Monitoring]
+        R --> S[Adjustment Period]
+        S --> T[Stability Confirmation]
+    end
+
+    PreSales --> SalesProcess
+    SalesProcess --> PreHandoff
+    PreHandoff --> Handoff
+    Handoff --> PostHandoff
